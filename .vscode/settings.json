@@ -1,0 +1,7 @@
+{
+    "python.testing.pytestArgs": [
+        "0x02-python-import_modules"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+}
