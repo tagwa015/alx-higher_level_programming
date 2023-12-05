@@ -72,4 +72,3 @@ void free_listint(listint_t *head)
         free(current);
     }
 }
-carrie@ubuntu:0x03$
