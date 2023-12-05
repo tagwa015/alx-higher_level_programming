@@ -9,7 +9,7 @@ int is_palindrome(listint_t **head)
 {
     if (head == NULL || *head == NULL)
         return (1);
-    
+
     return (aux_palind(head, *head));
 }
 
@@ -19,14 +19,14 @@ int is_palindrome(listint_t **head)
  * @end: end node of the list
  * Return: 0 if not a palindrome, 1 if a palindrome
  */
-int aux_palind(listint_t *head, listint_t *end)
+int aux_palind(listint_t *start, listint_t *end)
 {
     if (end == NULL)
         return (1);
-    
-    if (aux_palind(start, end->next) && (*head)->n == end->n)
+
+    if (aux_palind(start, end->next) && (start)->n == end->n)
     {
-        *head = (*head)->next;
+        *start = (*start)->next;
         return (1);
     }
 
