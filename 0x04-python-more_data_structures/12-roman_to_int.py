@@ -15,13 +15,15 @@ def roman_to_int(roman_string):
 
     result = 0
     prev_value = 0
-    
-    for i in range(len(roman_string) - 1, -1, -1):
-        current_value = roman_to_int_mapping[roman_string[i]]
-        if current_value >= prev_value:
-            result += current_value
-        else:
+
+    for char in reversed(roman_string):
+        if char not in roman_to_int_mapping:
+            return 0
+        current_value = roman_to_int_mapping[char]
+        if current_value < prev_value:
             result -= current_value
+        else:
+            result += current_value
         prev_value = current_value
-    
+
     return result
