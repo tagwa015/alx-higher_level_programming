@@ -2,6 +2,9 @@
 // C extensions should only #include <Python.h>, and not include directly
 // the other Python header files included by <Python.h>.
 
+void print_python_list(PyObject *p);
+void print_python_bytes(PyObject *p);
+
 #ifndef Py_PYTHON_H
 #define Py_PYTHON_H
 
